@@ -10,7 +10,7 @@ const Hero = (props: Props) => {
         <div className='relative container mx-auto px-20 my-20 flex gap-10'>
             <div className="w-[55%] flex flex-col gap-2 text-white">
                 <h1 className={`${montserat.className} text-[53px] font-bold leading-[65px]`}>
-                    Welcome to Flipr Gateway to <span className='text-primary-200'>Hassle-free Weekly </span> Crypto to 10% Returns
+                    Welcome to Flipr, your gateway to <span className='text-primary-200'>hassle-free crypto </span> arbitrage with up to 10% weekly Returns
                 </h1>
                 <Image src='/vvector1.png' alt='' height={100} width={100} className='absolute' />
 
