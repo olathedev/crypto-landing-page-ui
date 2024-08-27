@@ -32,8 +32,6 @@ const Signup = (props: Props) => {
         toast.success('Success', {
             description: response?.data?.message
         })
-
-
     }
     return (
         <div>
@@ -84,7 +82,7 @@ const Signup = (props: Props) => {
                         {/* <input type="checkbox" name="" className='p-2' id="" /> */}
                         <span className='text-sm text-gray-500'>By signing up, you agree to the Terms of Service and Privacy Policy of flipr.io</span>
                     </div>
-                    <button className='py-4 w-full rounded-md bg-primary-200 text-white'>{ !loading ? 'Sign Up' : 'Processing...' }</button>
+                    <button className='py-4 w-full rounded-md bg-primary-200 text-white'>{!loading ? 'Sign Up' : 'Processing...'}</button>
                     <div className="text-center">Already have an account? <Link href='/login' className='text-primary-200 font-semibold cursor-pointer'>log in!</Link> </div>
                 </form>
             </div>
