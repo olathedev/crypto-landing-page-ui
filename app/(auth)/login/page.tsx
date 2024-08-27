@@ -7,15 +7,15 @@ const Login = (props: Props) => {
   return (
     <div>
         <h2 className='text-2xl font-semibold mb-6'>Log in to your account</h2>
-        <form action="" className='flex flex-col gap-[30px]'>
+        <form action="" className='flex flex-col gap-4'>
             <div className='flex flex-col'>
-                <label className='font-semibold'>Email</label>
+                <label className='font-[500]'>Email</label>
                 <input type="text" className='py-4 px-3 rounded bg-[#F3F4F6]' />
             </div>
 
             <div className='flex flex-col'>
-                <label className='font-semibold w-full flex justify-between'><span>Password</span> 
-                <Link href='/forgot-password' className='text-primary-200 font-normal cursor-pointer'>Forgot Password?</Link>
+                <label className='font-[500] w-full flex justify-between'><span>Password</span> 
+                <Link href='/forgot-password' className='text-primary-200 font-normal cursor-pointer text-sm'>Forgot Password?</Link>
                 </label>
                 <input type="password" className='py-4 px-3 rounded bg-[#F3F4F6]' />
             </div>
