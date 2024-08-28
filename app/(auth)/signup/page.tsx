@@ -7,6 +7,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { z } from 'zod'
+import { useRouter } from 'next/navigation' 
 
 type Props = {}
 type signupFormData = z.infer<typeof signUpSchema>
@@ -16,6 +17,7 @@ const Signup = (props: Props) => {
     });
 
     const [loading, setLoading] = useState(false)
+    const router = useRouter()
 
     const onSubmit = async (data: signupFormData) => {
         console.log(data)
@@ -32,6 +34,7 @@ const Signup = (props: Props) => {
         toast.success('Success', {
             description: response?.data?.message
         })
+        router.push('/login')
     }
     return (
         <div>

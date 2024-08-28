@@ -3,6 +3,7 @@ import { apiService } from '@/services'
 import Link from 'next/link'
 import React, { FormEvent, useState } from 'react'
 import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
 
 type Props = {}
 
@@ -10,6 +11,7 @@ const Login = (props: Props) => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [loading, setLoading] = useState(false)
+    const router = useRouter()
 
     const onSubmit = async (e: FormEvent) => {
         e.preventDefault()
@@ -28,10 +30,14 @@ const Login = (props: Props) => {
             })
         return
         }
+        // temporary implementation just for test purposes
+        const userData = data?.data?.user
+        localStorage.setItem('user', JSON.stringify(userData))
         console.log(data)
         toast.success('Success', {
             description: data?.message
         })
+        router.push('/dashboard')
 
     }
 
