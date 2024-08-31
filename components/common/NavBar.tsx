@@ -6,7 +6,7 @@ type Props = {}
 
 const NavBar = (props: Props) => {
     return (
-        <nav className="h-[75px] container mx-auto px-10 flex justify-between items-center">
+        <nav className="h-[75px] container mx-auto px-10 flex justify-between items-center sticky top-0 bg-appBackground z-20">
 
             <div className="">
                 <Image src='/logo.png' alt='' height={40} width={90} />

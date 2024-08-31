@@ -38,7 +38,6 @@ const Login = (props: Props) => {
             description: data?.message
         })
         router.push('/dashboard')
-
     }
 
     return (

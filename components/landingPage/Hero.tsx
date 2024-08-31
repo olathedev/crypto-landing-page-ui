@@ -12,7 +12,7 @@ const Hero = (props: Props) => {
                 <h1 className={`${montserat.className} text-[53px] font-bold leading-[65px]`}>
                     Welcome to Flipr, your gateway to <span className='text-primary-200'>hassle-free crypto </span> arbitrage with up to 10% weekly Returns
                 </h1>
-                <Image src='/vvector1.png' alt='' height={100} width={100} className='absolute' />
+                {/* <Image src='/vvector1.png' alt='' height={100} width={100} className='absolute' /> */}
 
                 <div className='w-[350px] flex flex-col gap-1'>
                     <p className='text-center text-lg'>Crypto Market Starts in</p>
