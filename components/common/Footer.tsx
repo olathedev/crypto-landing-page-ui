@@ -5,10 +5,10 @@ type Props = {}
 
 const Footer = (props: Props) => {
     return (
-        <div className='h-[318px] w-full bg-[#00C4F4] bg-opacity-30 px-20 py-14 '>
-            <div className="container mx-auto flex gap-[100px]">
+        <div className='w-full bg-[#00C4F4] bg-opacity-30 px-6 md:px-20 py-14 '>
+            <div className="container mx-auto flex flex-col md:flex-row gap-[100px]">
 
-                <div className='w-[30%] flex flex-col gap-6'>
+                <div className='md:w-[30%] flex flex-col gap-6'>
                     <Image src='/logo.png' alt='' height={45} width={102} />
 
                     <p className='text-[#F7F7F7]'>Massa blandit semper varius faucibus. Suspendisse viverra venenatis placerat nam ut. Pellentesque sit id tempor turpis.</p>
@@ -49,7 +49,7 @@ const Footer = (props: Props) => {
                         </div>
                     </div>
                 </div>
-                <div className='w-grow grid grid-cols-3 gap-10 text-white tex-sm'>
+                <div className='md:grow grid grid-cols-2 md:grid-cols-3 gap-10 text-white tex-sm'>
 
                     <div>
                         <h3 className='text-xl font-medium mb-4'>Our Products</h3>

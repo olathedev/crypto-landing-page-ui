@@ -15,14 +15,15 @@ const Hero = (props: Props) => {
                 </h1>
                 {/* <Image src='/vvector1.png' alt='' height={100} width={100} className='absolute' /> */}
 
-                <div className='w-[350px] flex flex-col gap-1'>
+                <div className='md:w-[350px] flex flex-col gap-1 my-4 md:my-2'>
                     <p className='text-center text-lg'>Crypto Market Starts in</p>
-                    <div className='h-[70px] w-full bg-[#111E32] rounded-2xl'>
+                    <div className='h-[60px] w-full bg-[#111E32] rounded-2xl text-center text-white flex items-center justify-center'>
+                        countdown timer here
                     </div>
 
-                    <div className="mt-4 flex gap-4">
-                        <button className='bg-primary-100 text-white py-3 px-10 rounded-lg'>Join Flipr</button>
-                        <button className='border border-primary-100 text-white py-3 px-10 rounded-lg'>Trade Crypto</button>
+                    <div className="pt-5 w-full flex justify-center gap-4">
+                        <button className='bg-primary-100 text-white py-3 px-8 md:px-10 rounded-lg'>Join Flipr</button>
+                        <button className='border border-primary-100 text-white py-3 px-8 md:px-10 rounded-lg'>Trade Crypto</button>
 
                     </div>
                 </div>
