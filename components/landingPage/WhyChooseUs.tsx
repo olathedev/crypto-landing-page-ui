@@ -18,7 +18,7 @@ const WhyChooseUs = (props: Props) => {
             <header className="text-center flex flex-col items-center md:gap-2">
                 <p className="text-primary-100 ">Why Choose Us</p>
                 <h2 className="text-xl md:text-[36px] text-white mb-2">Safe, guaranteed, and easy to use</h2>
-                <p className="text-[#CFCFCF] text-sm md:w-[826.5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute  mollit anim id est laborum.
+                <p className="text-[#CFCFCF] text-sm md:text-base md:w-[826.5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute  mollit anim id est laborum.
                 </p>
 
             </header>
