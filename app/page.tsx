@@ -7,6 +7,7 @@ import WhyChooseUs from "@/components/landingPage/WhyChooseUs";
 import Footer from "@/components/common/Footer";
 import WalletIcon from "@/components/common/icons/WalletIcon";
 import CartIcon from "@/components/common/icons/CartIcon";
+import Features from "@/components/landingPage/Features";
 
 
 const montserat = Montserrat({ subsets: ['latin'] })
@@ -20,52 +21,7 @@ export default function Home() {
       <div className="w-full container mx-auto pt-10 md:pt-40">
         <AboutUs />
         <WhyChooseUs />
-        <div className="w-full">
-          <header className="text-center flex flex-col items-center gap-1 ">
-            <p className="text-primary-100 text-lg ">Our Features</p>
-            <h2 className="text-[36px] text-white ">Attractive Features</h2>
-            <p className="text-[#CFCFCF] w-[826.5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute  mollit anim id est laborum.
-              .
-            </p>
-
-          </header>
-
-          <div className="w-full flex items-center justify-center my-10 ">
-
-            <div className="w-[80%] grid grid-cols-3 gap-10">
-
-              <div className="h-[371px] w-full border border-primary-100 rounded-lg p-6 flex flex-col gap-6 items-center justify-center text-white text-center">
-                <div className="h-[75px] w-[75px] flex items-center justify-center bg-[#353535] rounded-full border-[#353535]">
-                  <WalletIcon />
-                </div>
-
-                <h3 className="text-2xl">Flexible Investment</h3>
-                <p className="text-gray-400 text-sm">Lorem ullamco laboris nisi ex ea commodo consequat. Duis aute  mollit anim id est laborum sad to veniam nostrud quis exercition laboris.
-                </p>
-              </div>
-
-              <div className="h-[371px] w-full border border-primary-100 p-6 rounded-lg flex flex-col gap-6 items-center justify-center text-white text-center">
-                <div className="h-[75px] w-[75px] flex items-center justify-center bg-[#353535] rounded-full border-[#353535]">
-                  <WalletIcon />
-                </div>
-
-                <h3 className="text-2xl">Weekly Profits</h3>
-                <p className="text-gray-400 text-sm">Lorem ullamco laboris nisi ex ea commodo consequat. Duis aute  mollit anim id est laborum sad to veniam nostrud quis exercition laboris.
-                </p>
-              </div>
-
-              <div className="h-[371px] w-full rounded-xl p-6 flex flex-col gap-6 items-center justify-center text-white text-center border border-primary-100">
-                <div className="h-[75px] w-[75px] flex items-center justify-center bg-[#353535] rounded-full border-[#353535]">
-                  <CartIcon />
-                </div>
-
-                <h3 className="text-2xl">Buy and or sell</h3>
-                <p className="text-gray-400 text-sm">Lorem ullamco laboris nisi ex ea commodo consequat. Duis aute  mollit anim id est laborum sad to veniam nostrud quis exercition laboris.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Features />
 
         <div className="flex items-center px-20 mt-16">
           <div className="w-1/2">

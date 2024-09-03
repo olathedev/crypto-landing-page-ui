@@ -25,14 +25,14 @@ const WhyChooseUs = (props: Props) => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:mt-5 text-white">
                 {cardData.map((card, index) => (
-                    <div className="w-full border rounded-[7.6px] border-[#353535] text-center flex-col gap-4 justify-center px-3 py-5 md:p-6" key={index}>
+                    <div className="w-full border rounded-[7.6px] border-[#353535] text-center md:text-start flex-col gap-4 md:gap-6 justify-center px-3 py-5 md:p-6" key={index}>
 
-                        <div className="hidden md:flex md:h-[75px] md:w-[75px] items-center justify-center bg-[#353535] rounded-full border-[#353535]">
+                        <div className="hidden md:flex h-[75px] w-[75px] items-center justify-center bg-[#353535] rounded-full border-[#353535]">
                             {card.icon}
                         </div>
 
                         
-                        <h1 className="tetx-sm md:text-xl font-medium">{card.title}</h1>
+                        <h1 className="tetx-sm md:text-xl font-medium my-3">{card.title}</h1>
                         <p className="text-[#7D7D7D] text-[10px] md:text-lg">
                             {card.body}
 
