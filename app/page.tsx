@@ -8,6 +8,8 @@ import Footer from "@/components/common/Footer";
 import WalletIcon from "@/components/common/icons/WalletIcon";
 import CartIcon from "@/components/common/icons/CartIcon";
 import Features from "@/components/landingPage/Features";
+import Testimonial from "@/components/landingPage/Testimonial";
+import HowToTrade from "@/components/landingPage/HowToTrade";
 
 
 const montserat = Montserrat({ subsets: ['latin'] })
@@ -22,62 +24,8 @@ export default function Home() {
         <AboutUs />
         <WhyChooseUs />
         <Features />
-
-        <div className="flex items-center px-20 mt-16">
-          <div className="w-1/2">
-            <p className="text-primary-100 text-lg ">Testimonials</p>
-            <h2 className="text-[36px] text-white ">Users from all over the world</h2>
-            <p className="text-[#F7F7F7]">Flipr has been trusted by more than 10,000 clients.
-            </p>
-
-            <div className="flex gap-10 mt-10 text-white">
-              <div>
-                <p className="text-[45px] text-white font-medium">32K+</p>
-                <p className="text-center text-[#CFCFCF] -mt-2">People Joined</p>
-              </div>
-              <div>
-                <p className="text-[45px] text-white font-medium">250+</p>
-                <p className="text-center text-[#CFCFCF] -mt-2">Active traders</p>
-              </div>
-
-              <div>
-                <p className="text-[45px] text-white font-medium">87+</p>
-                <p className="text-center text-[#CFCFCF] -mt-2">Countries</p>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/2">
-            <Image src='/world.png' alt="" width={560} height={283} />
-          </div>
-
-        </div>
-
-        <div className="my-28 flex flex-col gap-10">
-          <header className="flex flex-col  items-center text-center gap-1">
-            <p className="text-primary-100 text-lg ">Trade</p>
-            <h2 className="text-[36px] text-white ">How to Trade with Flipr</h2>
-            <p className="text-[#F7F7F7] w-[830px]">Trading with Flipr is designed to be as seamless and intuitive as possible. Follow these straightforward steps to start maximizing your crypto returns through our automated arbitrage platform
-            </p>
-          </header>
-
-          <div className="flex gap-16 px-20 mt-10">
-            <div className="w-1/2">
-              <Image src='/trading.png' alt="" width={500} height={500} />
-
-            </div>
-
-            <div className="w-1/2 text-white  flex flex-col gap-4 py-10">
-              <h2 className={`text-[50px] font-bold`}>Steps to trade</h2>
-              <ol className="flex flex-col gap-5 list-inside list-disc text-[20px]">
-                <li>Sign Up fo r Your Flipr Account</li>
-                <li>Deposit Your Funds</li>
-                <li>Activate Automated Trading</li>
-                <li>Monitor Your Earnings</li>
-                <li>Withdraw Your Profits</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+        <Testimonial />
+        <HowToTrade />
       </div>
 
       <div className="w-full bg-[#505050] h-[491px] ">
