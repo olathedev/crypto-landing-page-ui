@@ -5,6 +5,8 @@ import { Montserrat, Rubik } from "next/font/google";
 import AboutUs from "@/components/landingPage/AboutUs";
 import WhyChooseUs from "@/components/landingPage/WhyChooseUs";
 import Footer from "@/components/common/Footer";
+import WalletIcon from "@/components/common/icons/WalletIcon";
+import CartIcon from "@/components/common/icons/CartIcon";
 
 
 const montserat = Montserrat({ subsets: ['latin'] })
@@ -12,24 +14,60 @@ const rubik = Rubik({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-appBackground ">
+    <main className="min-h-screen min-w-full w-full bg-appBackground ">
       <NavBar />
       <Hero />
-      <div className="w-full container mx-auto pt-40">
+      <div className="w-full container mx-auto pt-10 md:pt-40">
         <AboutUs />
         <WhyChooseUs />
-        <div className="w-full h-[300px]">
+        <div className="w-full">
           <header className="text-center flex flex-col items-center gap-1 ">
             <p className="text-primary-100 text-lg ">Our Features</p>
-            <h2 className="text-[36px] text-white ">Safe, guaranteed, and easy to use</h2>
+            <h2 className="text-[36px] text-white ">Attractive Features</h2>
             <p className="text-[#CFCFCF] w-[826.5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute  mollit anim id est laborum.
               .
             </p>
 
           </header>
+
+          <div className="w-full flex items-center justify-center my-10 ">
+
+            <div className="w-[80%] grid grid-cols-3 gap-10">
+
+              <div className="h-[371px] w-full border border-primary-100 rounded-lg p-6 flex flex-col gap-6 items-center justify-center text-white text-center">
+                <div className="h-[75px] w-[75px] flex items-center justify-center bg-[#353535] rounded-full border-[#353535]">
+                  <WalletIcon />
+                </div>
+
+                <h3 className="text-2xl">Flexible Investment</h3>
+                <p className="text-gray-400 text-sm">Lorem ullamco laboris nisi ex ea commodo consequat. Duis aute  mollit anim id est laborum sad to veniam nostrud quis exercition laboris.
+                </p>
+              </div>
+
+              <div className="h-[371px] w-full border border-primary-100 p-6 rounded-lg flex flex-col gap-6 items-center justify-center text-white text-center">
+                <div className="h-[75px] w-[75px] flex items-center justify-center bg-[#353535] rounded-full border-[#353535]">
+                  <WalletIcon />
+                </div>
+
+                <h3 className="text-2xl">Weekly Profits</h3>
+                <p className="text-gray-400 text-sm">Lorem ullamco laboris nisi ex ea commodo consequat. Duis aute  mollit anim id est laborum sad to veniam nostrud quis exercition laboris.
+                </p>
+              </div>
+
+              <div className="h-[371px] w-full rounded-xl p-6 flex flex-col gap-6 items-center justify-center text-white text-center border border-primary-100">
+                <div className="h-[75px] w-[75px] flex items-center justify-center bg-[#353535] rounded-full border-[#353535]">
+                  <CartIcon />
+                </div>
+
+                <h3 className="text-2xl">Buy and or sell</h3>
+                <p className="text-gray-400 text-sm">Lorem ullamco laboris nisi ex ea commodo consequat. Duis aute  mollit anim id est laborum sad to veniam nostrud quis exercition laboris.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="flex items-center px-20">
+        <div className="flex items-center px-20 mt-16">
           <div className="w-1/2">
             <p className="text-primary-100 text-lg ">Testimonials</p>
             <h2 className="text-[36px] text-white ">Users from all over the world</h2>
@@ -68,7 +106,7 @@ export default function Home() {
 
           <div className="flex gap-16 px-20 mt-10">
             <div className="w-1/2">
-            <Image src='/trading.png' alt="" width={500} height={500} />
+              <Image src='/trading.png' alt="" width={500} height={500} />
 
             </div>
 
@@ -76,7 +114,7 @@ export default function Home() {
               <h2 className={`text-[50px] font-bold`}>Steps to trade</h2>
               <ol className="flex flex-col gap-5 list-inside list-disc text-[20px]">
                 <li>Sign Up fo r Your Flipr Account</li>
-                <li>Deposit Your Funds</li> 
+                <li>Deposit Your Funds</li>
                 <li>Activate Automated Trading</li>
                 <li>Monitor Your Earnings</li>
                 <li>Withdraw Your Profits</li>
@@ -126,9 +164,9 @@ export default function Home() {
               <p className="text-[#F7F7F7] my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et consequat. Duis aute  mollit anim id est laborum.</p>
 
               <div className="h-[53px] w-full bg-white rounded-lg flex">
-                <input type="text" className=" h-full text-black  rounded-l-lg w-2/3 border-none px-4 text-blck" placeholder="Enter Your Email"  />
+                <input type="text" className=" h-full text-black  rounded-l-lg w-2/3 border-none px-4 text-blck" placeholder="Enter Your Email" />
                 <button className='w-1/3 h-full bg-primary-200 text-white px-2 rounded-r-lg'>Suscribe</button>
-   
+
               </div>
 
             </div>
