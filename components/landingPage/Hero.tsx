@@ -24,7 +24,6 @@ const Hero = (props: Props) => {
                     <div className="pt-5 w-full flex justify-center gap-4">
                         <button className='bg-primary-100 text-white py-3 md:py-4 px-8 md:px-10 rounded-lg'>Join Flipr</button>
                         <button className='border border-primary-100 text-white py-3 md:py-4 px-8 md:px-10 rounded-lg'>Trade Crypto</button>
-
                     </div>
                 </div>
             </div>
