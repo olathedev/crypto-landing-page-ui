@@ -31,7 +31,7 @@ export default function Features({ }: Props) {
 
                         <button className='py-3 px-6 text-white rounded-lg bg-primary-200 flex items-center gap-2 text-[12px] md:text-base'>Learn More
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.34839 12.0301L8.98391 8.3946C9.41326 7.96525 9.41326 7.26268 8.98391 6.83333L5.34839 3.19781" stroke="white" stroke-width="0.836392" stroke-miterlimit="10"  strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M5.34839 12.0301L8.98391 8.3946C9.41326 7.96525 9.41326 7.26268 8.98391 6.83333L5.34839 3.19781" stroke="white" strokeWidth="0.836392" stroke-miterlimit="10"  strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
                     </div>
@@ -47,7 +47,7 @@ export default function Features({ }: Props) {
                         
                         <button className='py-3 px-6 text-white rounded-lg bg-primary-200 flex items-center gap-2 text-[12px] md:text-base'>Learn More
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.34839 12.0301L8.98391 8.3946C9.41326 7.96525 9.41326 7.26268 8.98391 6.83333L5.34839 3.19781" stroke="white" stroke-width="0.836392" strokeMiterlimit="10"  strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M5.34839 12.0301L8.98391 8.3946C9.41326 7.96525 9.41326 7.26268 8.98391 6.83333L5.34839 3.19781" stroke="white" strokeWidth="0.836392" strokeMiterlimit="10"  strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
                     </div>
@@ -63,7 +63,7 @@ export default function Features({ }: Props) {
                         
                         <button className='py-3 px-6 text-white rounded-lg bg-primary-200 flex items-center gap-2 text-[12px] md:text-base'>Learn More
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.34839 12.0301L8.98391 8.3946C9.41326 7.96525 9.41326 7.26268 8.98391 6.83333L5.34839 3.19781" stroke="white" stroke-width="0.836392" stroke-miterlimit="10"  strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M5.34839 12.0301L8.98391 8.3946C9.41326 7.96525 9.41326 7.26268 8.98391 6.83333L5.34839 3.19781" stroke="white" strokeWidth="0.836392" stroke-miterlimit="10"  strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
                     </div>
