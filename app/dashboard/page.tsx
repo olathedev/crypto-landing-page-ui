@@ -89,8 +89,8 @@ const Dashboard = () => {
 
           <div className="mt-4 flex flex-col">
 
-            {[1, 2, 3].map(() => (
-              <div className='flex justify-between border-b py-4'>
+            {[1, 2, 3].map((index, num) => (
+              <div className='flex justify-between border-b py-4' key={index}>
                 <div className='flex flex-col gap-6'>
                   <h2 className="text-xl">Sell</h2>
 
