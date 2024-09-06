@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -29,8 +30,8 @@ const Dashboard = () => {
     <div className="w-full flex flex-col gap-8 text-[#1E1E1E]">
       <header className='w-full flex gap-4 items-center'>
         <div className=''>
-          <div className="h-[44px] w-[44px] bg-primary-100 shadow-sm rounded-full">
-
+          <div className="h-[44px] w-[44px] bg-white shadow-sm rounded-full">
+            <Image src='/profileImage.png' alt='' height={44} width={44} className='object-cover' />
           </div>
         </div>
 
@@ -49,9 +50,9 @@ const Dashboard = () => {
         </div>
       </header>
 
-      <div className='bg-white h-full w-full rounded-xl p-6 flex flex-col gap-8'>
+      <div className='relative bg-white h-[70vh] md:h-[75vh] overflow-auto w-full rounded-xl flex flex-col gap-6'>
         {/* balance */}
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 sticky top-0 bg-white z-10 p-6'>
           <div>
             <h3 className='text-2xl'>Balance</h3>
             <p className='text-3xl font-semibold'>$52,291</p>
@@ -66,7 +67,7 @@ const Dashboard = () => {
 
         {/* Transaction History */}
 
-        <div className="w-full">
+        <div className="w-full p-6">
           <header className='w-full flex justify-between items-center'>
             <p className='font-semibold text-[#9E9E9E]'>Transactions</p>
             <span>
@@ -86,9 +87,11 @@ const Dashboard = () => {
             </span>
           </header>
 
-          <div className="mt-5 flex flex-col">
-            <div className='flex justify-between'>
-              <div className='flex flex-col gap-4'>
+          <div className="mt-4 flex flex-col">
+
+            {[1, 2, 3].map(() => (
+              <div className='flex justify-between border-b py-4'>
+                <div className='flex flex-col gap-6'>
                   <h2 className="text-xl">Sell</h2>
 
                   <div className="flex flex-col text-sm font-extralight text-[#121212]">
@@ -96,18 +99,22 @@ const Dashboard = () => {
                     <p>You receive</p>
                     <p>Reference number</p>
                   </div>
-              </div>
-              <div className='flex flex-col gap-4 items-end justify-start'>
-              <h2 className="text-xl">15.000000 XRP</h2>
+                </div>
+                <div className='flex flex-col gap-4 items-end justify-start'>
+                  <h2 className="text-xl">15.000000 XRP</h2>
 
-              <div className="flex flex-col text-sm text-[#121212]">
+                  <div className="flex flex-col text-sm text-[#121212]">
                     <p className='text-[#1ECB4F] inline-flex justify-end'>Completed</p>
                     <p className=' inline-flex justify-end'>20,000 NGN</p>
                     <p>3005322T60148765</p>
                   </div>
+                </div>
               </div>
-            </div>
+            ))}
+
+            <p className="text-center text-primary-100 pt-6">See more</p>
           </div>
+
         </div>
       </div>
     </div>
