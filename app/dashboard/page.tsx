@@ -1,11 +1,15 @@
 'use client';
 
+import CryptoDeposit from '@/components/common/icons/CryptoDeposit';
+import FiatDepositIcon from '@/components/common/icons/FiatDepositIcon';
+import AppModal from '@/components/ui/AppModal';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const Dashboard = () => {
   const [user, setUser] = useState<any>(null);
+  const [depositModalOpen, setDepositModalOpen] = useState(false)
   const router = useRouter();
 
   useEffect(() => {
@@ -46,77 +50,98 @@ const Dashboard = () => {
             <path d="M12.0195 22.8101C11.0295 22.8101 10.0695 22.4101 9.36953 21.7101C8.66953 21.0101 8.26953 20.0501 8.26953 19.0601H9.76953C9.76953 19.6501 10.0095 20.2301 10.4295 20.6501C10.8495 21.0701 11.4295 21.3101 12.0195 21.3101C13.2595 21.3101 14.2695 20.3001 14.2695 19.0601H15.7695C15.7695 21.1301 14.0895 22.8101 12.0195 22.8101Z" fill="#F7F7F7" />
             <circle cx="17" cy="5" r="2.5" fill="#F46D22" stroke="white" />
           </svg>
-
         </div>
       </header>
+      <div className="h-full flex items-center justify-center">
+        <div className='relative bg-[#1B2028] text-white h-[70vh] md:h-[75vh] overflow-auto w-full rounded-[16px] flex flex-col gap-6'>
+          {/* balance */}
+          <div className='flex flex-col gap-4 sticky top-0 bg-[#1B2028] z-10 p-6'>
+            <div>
+              <h3 className='text-2xl'>Balance</h3>
+              <p className='text-3xl font-semibold'>$52,291</p>
+            </div>
 
-      <div className='relative bg-white h-[70vh] md:h-[75vh] overflow-auto w-full rounded-xl flex flex-col gap-6'>
-        {/* balance */}
-        <div className='flex flex-col gap-4 sticky top-0 bg-white z-10 p-6'>
-          <div>
-            <h3 className='text-2xl'>Balance</h3>
-            <p className='text-3xl font-semibold'>$52,291</p>
+            <div className="flex gap-4">
+              <button className='py-2 w-[140px] bg-[#1E1E1E] text-white rounded-[8px] text-sm font-[500]' onClick={() => setDepositModalOpen(true)}>Deposit</button>
+              <button className='py-2 w-[140px] border border-white text-white rounded-[8px] text-sm font-[500]'>Withdraw</button>
+
+            </div>
           </div>
 
-          <div className="flex gap-4">
-            <button className='py-2 w-[140px] bg-[#1E1E1E] text-white rounded-[8px] text-sm font-[500]'>Deposit</button>
-            <button className='py-2 w-[140px] border border-[#1E1E1E] text-[#1E1E1E] rounded-[8px] text-sm font-[500]'>Withdraw</button>
+          {/* Transaction History */}
 
-          </div>
-        </div>
+          <div className="w-full p-6">
+            <header className='w-full flex justify-between items-center'>
+              <p className='font-semibold text-[#9E9E9E]'>Transactions</p>
+              <span>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_226_1142)">
+                    <rect y="10" width="4" height="4" rx="2" transform="rotate(-90 0 10)" fill="#9E9E9E" />
+                    <rect x="6" y="10" width="4" height="4" rx="2" transform="rotate(-90 6 10)" fill="#9E9E9E" />
+                    <rect x="12" y="10" width="4" height="4" rx="2" transform="rotate(-90 12 10)" fill="#9E9E9E" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_226_1142">
+                      <rect width="16" height="16.64" fill="white" transform="matrix(0 -1 1 0 0 16)" />
+                    </clipPath>
+                  </defs>
+                </svg>
 
-        {/* Transaction History */}
+              </span>
+            </header>
 
-        <div className="w-full p-6">
-          <header className='w-full flex justify-between items-center'>
-            <p className='font-semibold text-[#9E9E9E]'>Transactions</p>
-            <span>
-              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_226_1142)">
-                  <rect y="10" width="4" height="4" rx="2" transform="rotate(-90 0 10)" fill="#9E9E9E" />
-                  <rect x="6" y="10" width="4" height="4" rx="2" transform="rotate(-90 6 10)" fill="#9E9E9E" />
-                  <rect x="12" y="10" width="4" height="4" rx="2" transform="rotate(-90 12 10)" fill="#9E9E9E" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_226_1142">
-                    <rect width="16" height="16.64" fill="white" transform="matrix(0 -1 1 0 0 16)" />
-                  </clipPath>
-                </defs>
-              </svg>
+            <div className="mt-4 flex flex-col">
 
-            </span>
-          </header>
+              {[1, 2, 3].map((index, num) => (
+                <div className='flex justify-between border-b py-4' key={index}>
+                  <div className='flex flex-col gap-6'>
+                    <h2 className="text-xl">Sell</h2>
 
-          <div className="mt-4 flex flex-col">
+                    <div className="flex flex-col text-sm font-extralight text-[#F7F7F7]">
+                      <p>26/08/2024 - 20:49</p>
+                      <p>You receive</p>
+                      <p>Reference number</p>
+                    </div>
+                  </div>
+                  <div className='flex flex-col gap-4 items-end justify-start'>
+                    <h2 className="text-xl">15.000000 XRP</h2>
 
-            {[1, 2, 3].map((index, num) => (
-              <div className='flex justify-between border-b py-4' key={index}>
-                <div className='flex flex-col gap-6'>
-                  <h2 className="text-xl">Sell</h2>
-
-                  <div className="flex flex-col text-sm font-extralight text-[#121212]">
-                    <p>26/08/2024 - 20:49</p>
-                    <p>You receive</p>
-                    <p>Reference number</p>
+                    <div className="flex flex-col text-sm text-white">
+                      <p className='text-[#1ECB4F] inline-flex justify-end'>Completed</p>
+                      <p className=' inline-flex justify-end'>20,000 NGN</p>
+                      <p>3005322T60148765</p>
+                    </div>
                   </div>
                 </div>
-                <div className='flex flex-col gap-4 items-end justify-start'>
-                  <h2 className="text-xl">15.000000 XRP</h2>
+              ))}
 
-                  <div className="flex flex-col text-sm text-[#121212]">
-                    <p className='text-[#1ECB4F] inline-flex justify-end'>Completed</p>
-                    <p className=' inline-flex justify-end'>20,000 NGN</p>
-                    <p>3005322T60148765</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+              <p className="text-center text-primary-100 pt-6">See more</p>
+            </div>
 
-            <p className="text-center text-primary-100 pt-6">See more</p>
           </div>
-
         </div>
       </div>
+
+      <AppModal open={depositModalOpen} onClose={() => setDepositModalOpen(false)} title='Deposit'>
+        <div className="flex flex-col py-4 gap-4">
+          <div className='flex items-center gap-4 py-4 border-b border-gray-500'>
+           <CryptoDeposit />
+            <div className="flex flex-col">
+              <h3 className='text-xl font-medium'>Crypto</h3>
+              <p className='text-sm text-gray-300'>Transfer your funds into your Flipr wallet using the blockchain technology.</p>
+            </div>
+          </div>
+
+          <div className='flex items-center gap-4'>
+           <FiatDepositIcon />
+            <div className="flex flex-col">
+              <h3 className='text-xl font-medium'>Fiat</h3>
+              <p className='text-sm text-gray-300'>Easily deposit your native currencies using a variety of payment options.</p>
+            </div>
+          </div>
+
+        </div>
+      </AppModal>
     </div>
   );
 };
