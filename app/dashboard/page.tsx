@@ -53,7 +53,7 @@ const Dashboard = () => {
         </div>
       </header>
       <div className="h-full flex items-center justify-center">
-        <div className='relative bg-[#1B2028] text-white h-[70vh] md:h-[75vh] overflow-auto w-full rounded-[16px] flex flex-col gap-6'>
+        <div className='relative bg-[#1B2028] text-white h-[75vh] md:h-[75vh] overflow-auto w-full rounded-[16px] flex flex-col gap-6'>
           {/* balance */}
           <div className='flex flex-col gap-4 sticky top-0 bg-[#1B2028] z-10 p-6'>
             <div>
