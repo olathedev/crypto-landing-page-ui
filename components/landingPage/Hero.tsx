@@ -1,12 +1,20 @@
+"use client"
+
 import { Montserrat } from 'next/font/google'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion';
+import CountdownTimer from './countdownTimer';
 
 type Props = {}
 
 const montserat = Montserrat({ subsets: ['latin'] })
 const Hero = (props: Props) => {
+
+
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 7);
+
     return (
         <div className='relative container mx-auto px-6 my-6 md:px-20 md:mt-20 md:flex gap-10'>
             <div className="md:w-[60%] flex flex-col gap-2 text-white">
@@ -16,10 +24,8 @@ const Hero = (props: Props) => {
                 {/* <Image src='/vvector1.png' alt='' height={100} width={100} className='absolute' /> */}
 
                 <div className='md:w-[350px] flex flex-col gap-1 my-4 md:my-2'>
-                    <p className='text-center text-lg'>Crypto Market Starts in</p>
-                    <div className='h-[60px] w-full bg-[#111E32] rounded-2xl text-center text-white flex items-center justify-center'>
-                        countdown timer here
-                    </div>
+                    <p className='text-center text-lg'>Arbitrage Launch starts in</p>
+                    <CountdownTimer targetDate={targetDate} /> 
 
                     <div className="pt-5 w-full flex justify-center gap-4">
                         <button className='bg-primary-100 text-white py-3 md:py-4 px-8 md:px-10 rounded-lg'>Join Flipr</button>

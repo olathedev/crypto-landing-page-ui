@@ -15,16 +15,16 @@ function Testimonial({ }: Props) {
 
                 <div className="flex gap-10 md:mt-10 my-6 text-white">
                     <div>
-                        <p className="text-[38px] md:text-[45px] text-white font-medium">32K+</p>
+                        <p className="text-[38px] md:text-[45px] text-white font-medium">4K+</p>
                         <p className="text-center text-[#CFCFCF] -mt-2 text-sm md:text-base">People Joined</p>
                     </div>
                     <div>
-                        <p className="text-[38px] md:text-[45px] text-white font-medium">250+</p>
+                        <p className="text-[38px] md:text-[45px] text-white font-medium">1k+</p>
                         <p className="text-center text-[#CFCFCF] -mt-2 text-sm md:text-base">Active traders</p>
                     </div>
 
                     <div>
-                        <p className="text-[38px] md:text-[45px] text-white font-medium">87+</p>
+                        <p className="text-[38px] md:text-[45px] text-white font-medium">10+</p>
                         <p className="text-center text-[#CFCFCF] -mt-2 text-sm md:text-base">Countries</p>
                     </div>
                 </div>
