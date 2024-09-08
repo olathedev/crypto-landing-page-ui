@@ -1,10 +1,15 @@
+import NavBar from '@/components/common/NavBar';
 import Link from 'next/link';
-import React from 'react';
+
+
 
 const HowItWorks = () => {
     return (
-        <div className="bg-appBackground min-h-screen p-6">
-            <div className="container mx-auto text-white">
+        <div className="bg-appBackground min-h-screen">
+    
+            <NavBar />
+
+            <div className="container mx-auto text-white p-6">
                 <h1 className="text-4xl font-bold mb-6 text-primary-100">How Our Platform Works</h1>
                 <p className="mb-6 text-lg">
                     Welcome to our cryptocurrency arbitrage platform, where our advanced algorithm and automated bots work tirelessly to detect and capitalize on arbitrage opportunities across multiple exchanges in real-time. We handle the complex process of identifying price differences in various markets and executing trades faster than manual methods ever could.
