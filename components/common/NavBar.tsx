@@ -18,7 +18,7 @@ const NavBar = (props: Props) => {
 
                 <ul className="flex space-x-8 text-white">
                     <li className='text-primary-100'>Home</li>
-                    <li className='te'>How it Works </li>
+                    <li className='te'><Link href="/blog">How it Works</Link> </li>
                     <li className='text'>About Us</li>
                     <li className='text'>Contact </li>
                 </ul>
@@ -59,7 +59,7 @@ const NavBar = (props: Props) => {
                     <div className="p-4 flex flex-col gap-3">
                         <ul className="flex flex-col space-y-2 text-white">
                             <li className='text-primary-100'>Home</li>
-                            <li className='te'>How it Works </li>
+                            <li className='te'><Link href="/blog">How it Works</Link></li>
                             <li className='text'>About Us</li>
                             <li className='text'>Contact </li>
                         </ul>
